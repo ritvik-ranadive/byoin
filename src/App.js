@@ -10,9 +10,24 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      start: false
+      start: false,
+      gender: "",
+      firstName: "",
+      lastName: "",
+      birthDate: "",
+      telephoneNumber: "",
+      email: ""
     }
   };
+
+  handleLol = () => {
+    console.log("That was fuckin awesome.");
+  }
+  handleStateChange = (name, value) => {
+    this.setState(
+        {name: value}
+    );
+  }
 
   handleOnClick = () => {
     this.setState(
@@ -24,7 +39,7 @@ class App extends Component{
     if (this.state.start) {
       return(
         <Router>
-          <Route path='/Personal_Information' component={Personal_Information} />
+          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} lol={this.handleLol}/>}/>
           <Redirect to='/Personal_Information' />
         </Router>
       );

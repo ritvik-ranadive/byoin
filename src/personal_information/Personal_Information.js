@@ -6,9 +6,6 @@ import { DateInput } from 'semantic-ui-calendar-react';
 import Personal_Information_Hint from './Hint';
 import App from '../App'
 import Medicines from '../medicines/Medicines'
-// import data from '../data/data.json'
-// import patient from '../data/Input/PatientInput.json'
-
 
 const genderOptions = [
     {
@@ -35,32 +32,45 @@ class Personal_Information extends Component{
             gender: "",
             firstName: "",
             lastName: "",
-            birthday: "",
+            birthDate: "",
             email: ""
         };
-
-        this.handleGender = this.handleGender.bind(this);
-        this.handleFirstName = this.handleFirstName.bind(this);
     }
 
     handleChange = (event, {name, value}) => {
-        if (this.state.hasOwnProperty(name)) {
-          this.setState({ [name]: value });
-        }
+        this.setState(
+            {birthDate: value}
+        );
     }
 
-    handleGender(event) {
+    handleGender(event, {value}) {
         this.setState(
-            {gender: event.target.value}
+            {gender: value}
         );
-        console.log(this.state.gender);
     }
 
-    handleFirstName(event) {
+    handleFirstName(event, {value}) {
         this.setState(
-            {firstName: event.target.value}
+            {firstName: value}
         );
-        console.log(this.state.firstName);
+    }
+
+    handleLastName(event, {value}) {
+        this.setState(
+            {lastName: value}
+        );
+    }
+
+    handleTelephoneNumber(event, {value}) {
+        this.state(
+            {telephoneNumber: value}
+        );
+    }
+
+    handleEmail(event, {value}) {
+        this.state(
+            {email: value}
+        );
     }
 
     handleNext = () => {
@@ -123,20 +133,20 @@ class Personal_Information extends Component{
                             <Dropdown focus options={ genderOptions } placeholder='Please Choose...*' onChange={ this.handleGender }/>
                         </Form.Field>
                         <Form.Field>
-                            <Input focus fluid placeholder='First Name*' onChange={ this.handleFirstName}/>
+                            <Input focus fluid placeholder='First Name*' onChange={ this.handleFirstName }/>
                         </Form.Field>
                         <Form.Field>
-                            <Input focus fluid placeholder='Last Name*'/>
+                            <Input focus fluid placeholder='Last Name*' onChange= { this.handleLastName }/>
                         </Form.Field>
                         <Form.Field>
                             <DateInput focus name='date' placeholder='Birthdate*' 
                                 value={ this.state.date } onChange={this.handleChange}/>
                         </Form.Field>
                         <Form.Field>
-                            <Input focus fluid placeholder='Telephone Number'/>
+                            <Input focus fluid placeholder='Telephone Number' onChange={ this.handleTelephoneNumber }/>
                         </Form.Field>
                         <Form.Field>
-                            <Input focus fluid placeholder='E-Mail'/>
+                            <Input focus fluid placeholder='E-Mail' onChange={ this.handleEmail }/>
                         </Form.Field>
                     </Form>
                     <p></p>

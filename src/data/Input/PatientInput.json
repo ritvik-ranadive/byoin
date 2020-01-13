@@ -1,7 +1,8 @@
 {
     "gender": "Herr",
-    "name": "Ritvik Ranadive",
-    "birthdate": "18-10-1991",
-    "telephone": "015143615786",
+    "firstName": "Ritvik",
+    "lastName": "Ranadive",
+    "birthDate": "18-10-1991",
+    "telephoneNumber": "015143615786",
     "email": "ritvik.ranadive@gmail.com"
 }

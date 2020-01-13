@@ -142,11 +142,10 @@ class Camera_Screen extends Component{
                 return(
                     <div>
                         <Container textAlign='center'>
-                            <p></p>
-                            <Button icon onClick={ this.handleBack }>
+                            <Button floated='left' icon onClick={ this.handleBack }>
                                 <Icon name='angle left'/>
                             </Button>
-                            <Button icon onClick={ this.handleHint }>
+                            <Button floated='right' icon onClick={ this.handleHint }>
                                 <Icon name='question circle outline'/>
                             </Button>
                             <Header as='h1'>
