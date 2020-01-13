@@ -1,0 +1,20 @@
+{
+    "gender": "",
+    "first_name" : "",
+    "last_name" : "",
+    "birthdate": "",
+    "telephone_number": "",
+    "email": "",
+    "current_medication": [],
+    "allergies": [],
+    "diseases": [],
+    "further_details": [],
+    "condition": {
+        "first_occurence": "",
+        "since_when": "",
+        "description": "",
+        "bodysite": "",
+        "further_symptoms": []
+    },
+    "photo": ""
+}
