@@ -59,21 +59,21 @@ class Medicines extends Component{
         if(this.state.hint){
             return(
                 <Router>
-                  <Route path='/Medicines_Hint' component={ Medicines_Hint } />
+                    <Route path='/Medicines_Hint' render={(props) => <Medicines_Hint {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData}/>}/>
                   <Redirect to='/Medicines_Hint' />
                 </Router>
             );
         } else if(this.state.back){
             return(
                 <Router>
-                  <Route path='/Personal_Information' component={ Personal_Information } />
+                    <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData}/>}/>
                   <Redirect to='/Personal_Information' />
                 </Router>
             );
         } else if(this.state.next) {
             return(
                 <Router>
-                  <Route path='/Allergies' component={ Allergies } />
+                    <Route path='/Allergies' render={(props) => <Allergies {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData}/>}/>
                   <Redirect to='/Allergies' />
                 </Router>
             ); 
@@ -90,19 +90,18 @@ class Medicines extends Component{
                     <Button floated='right' icon onClick={ this.handleHint }>
                             <Icon name='question circle outline'/>
                     </Button>
-                    <Header as='h1'>
+                    <Header as='h2'>
                         Current Medication 
                     </Header>
                     <Divider/>
                     <Form>
                         { medicines }
                         <p></p>
-                        <Image centered size='tiny' src={ logo } onClick={ this.add } />
+                        <Image centered size='mini' src={ logo } onClick={ this.add } />
                         <p></p>
                         <Button centered color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Form>
                     </Container>
-                    
                 </div>
             )
         }

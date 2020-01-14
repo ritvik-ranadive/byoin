@@ -23,7 +23,7 @@ class Personal_Information_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Personal_Information' component={Personal_Information} />
+                    <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Personal_Information' />
                 </Router>
             );
@@ -32,10 +32,9 @@ class Personal_Information_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Personal Information</Header>
+                        <Header as='h2'>Personal Information</Header>
                         <p></p>
-                        <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
+                        <Container textAlign='center'>
                             <p>
                                 Please enter your personal information.
                             </p>

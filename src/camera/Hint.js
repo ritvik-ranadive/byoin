@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button, Header, Container} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Camera_Screen from "./Camera_Screen";
+import Condition from "../condition/Condition";
 
 class Camera_Hint extends Component{
 
@@ -23,7 +24,7 @@ class Camera_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                    <Route path='/Camera' component={ Camera_Screen } />
+                    <Route path='/Camera' render={(props) => <Camera_Screen {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Camera' />
                 </Router>
             );
@@ -32,10 +33,9 @@ class Camera_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Taking a photo</Header>
+                        <Header as='h2'>Taking a photo</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 Please make sure that the entire affected area
                                 is clearly visible in the picture.

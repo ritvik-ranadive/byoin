@@ -82,28 +82,28 @@ class Camera_Screen extends Component{
         if(this.state.hint) {
             return(
                 <Router>
-                    <Route path='/Camera_Hint' component={ Camera_Hint } />
+                    <Route path='/Camera_Hint' render={(props) => <Camera_Hint {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Camera_Hint' />
                 </Router>
             );
         } else if(this.state.retake) {
             return (
                 <Router>
-                    <Route path='/Camera' component={ Camera_Screen }/>
+                    <Route path='/Camera' render={(props) => <Camera_Screen {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Camera'/>
                 </Router>
             );
         } else if(this.state.back){
             return (
                 <Router>
-                    <Route path='/Camera_Info' component={ Camera_Info }/>
+                    <Route path='/Camera_Info' render={(props) => <Camera_Info {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Camera_Info'/>
                 </Router>
             );
         } else if(this.state.next) {
             return(
                 <Router>
-                    <Route path='/Condition' component={ Condition } />
+                    <Route path='/Condition' render={(props) => <Condition {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Condition' />
                 </Router>
             );
@@ -119,7 +119,7 @@ class Camera_Screen extends Component{
                             <Button floated='right' icon onClick={ this.handleHint }>
                                 <Icon name='question circle outline'/>
                             </Button>
-                            <Header as='h1'>
+                            <Header as='h2'>
                                 Please take a photo
                             </Header>
                             <Divider/>
@@ -148,7 +148,7 @@ class Camera_Screen extends Component{
                             <Button floated='right' icon onClick={ this.handleHint }>
                                 <Icon name='question circle outline'/>
                             </Button>
-                            <Header as='h1'>
+                            <Header as='h2'>
                                 Please take a photo
                             </Header>
                             <Divider/>

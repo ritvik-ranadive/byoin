@@ -60,21 +60,21 @@ class Allergies extends Component{
         if(this.state.hint){
             return(
                 <Router>
-                  <Route path='/Allergies_Hint' component={ Allergies_Hint } />
+                    <Route path='/Allergies_Hint' render={(props) => <Allergies_Hint {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Allergies_Hint' />
                 </Router>
             );
         } else if(this.state.back){
             return(
                 <Router>
-                  <Route path='/Medicines' component={ Medicines } />
+                    <Route path='/Medicines' render={(props) => <Medicines {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Medicines' />
                 </Router>
             );
         } else if(this.state.next) {
             return(
                 <Router>
-                  <Route path='/Diseases' component={ Diseases } />
+                    <Route path='/Diseases' render={(props) => <Diseases {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Diseases' />
                 </Router>
             ); 
@@ -91,14 +91,14 @@ class Allergies extends Component{
                     <Button floated='right' icon onClick={ this.handleHint }>
                             <Icon name='question circle outline'/>
                     </Button>
-                    <Header as='h1'>
+                    <Header as='h2'>
                         Allergies 
                     </Header>
                     <Divider/>
                     <Form>
                         { allergies }
                         <p></p>
-                        <Image centered size='tiny' src={ logo } onClick={ this.add } />
+                        <Image centered size='mini' src={ logo } onClick={ this.add } />
                         <p></p>
                         <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Form>

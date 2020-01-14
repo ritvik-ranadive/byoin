@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button, Header, Container} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Medicines from './Medicines';
+import Allergies from "../allergies/Allergies";
 
 class Medicines_Hint extends Component{
 
@@ -23,7 +24,7 @@ class Medicines_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Medicines' component={ Medicines } />
+                    <Route path='/Medicines' render={(props) => <Medicines {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData}/>}/>
                   <Redirect to='/Medicines' />
                 </Router>
             );
@@ -32,10 +33,9 @@ class Medicines_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Current Medication</Header>
+                        <Header as='h2'>Current Medication</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 Please enter the name of your medication/drug.
                             </p>

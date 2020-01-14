@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button, Header, Container} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Further_Details from './Further_Details';
+import Camera_Info from "../camera/Camera_Info";
 
 class Further_Details_Hint extends Component{
 
@@ -23,7 +24,7 @@ class Further_Details_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Further_Details' component={ Further_Details } />
+                    <Route path='/Further_Details' render={(props) => <Further_Details {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Further_Details' />
                 </Router>
             );
@@ -32,10 +33,9 @@ class Further_Details_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Further Details</Header>
+                        <Header as='h2'>Further Details</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 Please indicate whether the listed properties
                                 apply to you.

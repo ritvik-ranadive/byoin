@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button, Header, Container} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Condition from './Condition';
+import Thanks from "../Thanks";
 
 class Condition_Hint extends Component{
 
@@ -23,7 +24,7 @@ class Condition_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Condition' component={ Condition } />
+                    <Route path='/Condition' render={(props) => <Condition {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Condition' />
                 </Router>
             );
@@ -32,10 +33,9 @@ class Condition_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Condition</Header>
+                        <Header as='h2'>Condition</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 <b>First occurence:</b><br/>
                                Is this the first time your condition occurs or

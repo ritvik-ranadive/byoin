@@ -23,7 +23,7 @@ class Allergies_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Allergies' component={ Allergies } />
+                    <Route path='/Allergies' render={(props) => <Allergies {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Allergies' />
                 </Router>
             );
@@ -32,10 +32,9 @@ class Allergies_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Allergies</Header>
+                        <Header as='h2'>Allergies</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 Please enter the name of your allergy.
                             </p>

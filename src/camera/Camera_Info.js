@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Container, Icon, Grid } from 'semantic-ui-react';
+import {Button, Container, Icon, Grid, Header, Divider} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Further_Details from '../further_details/Further_Details'
 import Condition from '../condition/Condition'
@@ -38,14 +38,14 @@ class Camera_Info extends Component{
         if(this.state.take_photo) {
             return(
                 <Router>
-                    <Route path='/Camera' component={ Camera_Screen } />
+                    <Route path='/Camera' render={(props) => <Camera_Screen {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                     <Redirect to='/Camera' />
                 </Router>
             ); 
         } else if(this.state.back) {
             return(
                 <Router>
-                  <Route path='/Further_Details' component={ Further_Details } />
+                    <Route path='/Further_Details' render={(props) => <Further_Details {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Further_Details' />
                 </Router>
             ); 
@@ -53,7 +53,7 @@ class Camera_Info extends Component{
         } else if(this.state.skip) {
             return(
                 <Router>
-                  <Route path='/Condition' component={ Condition } />
+                    <Route path='/Condition' render={(props) => <Condition {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Condition' />
                 </Router>
             );
@@ -61,6 +61,13 @@ class Camera_Info extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
+                        <Button floated='left' icon onClick={ this.handleBack }>
+                            <Icon name='angle left'/>
+                        </Button>
+                        <Header as='h2'>
+                            Wound Documentation
+                        </Header>
+                        <Divider/>
                         <Icon name='camera' size='massive'></Icon>
                         <p></p>
                         <p></p>

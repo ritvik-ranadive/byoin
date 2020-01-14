@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button, Header, Container} from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Diseases from './Diseases';
+import Further_Details from "../further_details/Further_Details";
 
 class Diseases_Hint extends Component{
 
@@ -23,7 +24,7 @@ class Diseases_Hint extends Component{
         if(this.state.understood) {
             return(
                 <Router>
-                  <Route path='/Diseases' component={ Diseases } />
+                    <Route path='/Diseases' render={(props) => <Diseases {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
                   <Redirect to='/Diseases' />
                 </Router>
             );
@@ -32,10 +33,9 @@ class Diseases_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h1'>Existing/Prior Diseases</Header>
+                        <Header as='h2'>Existing/Prior Diseases</Header>
                         <p></p>
                         <Container text textAlign='center'>
-                            <Header as='h2'>Hint</Header>
                             <p>
                                 Please indcate whether you have or have had 
                                 any of the listed diseases/infections.

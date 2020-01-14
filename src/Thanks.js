@@ -16,10 +16,10 @@ class Thanks extends Component{
 
     generateHL7 = () => {
         patientHL7.gender = patient.gender;
-        patientHL7.name = patient.firstName + " " + patient.lastName;
-        patientHL7.telecom.push(patient.telephoneNumber);
-        patientHL7.birthDate = patient.birthDate;
-        patientHL7.telecom.push(patient.email); 
+        patientHL7.name = this.props.patientData.firstName + " " + this.props.patientData.lastName;
+        patientHL7.telecom.push(this.props.patientData.telephoneNumber);
+        patientHL7.birthDate = this.props.patientData.birthDate;
+        patientHL7.telecom.push(this.props.patientData.email);
         this.setState(
           {generate: true}
         );
@@ -40,14 +40,14 @@ class Thanks extends Component{
                 <div>
                     <Container textAlign='center'>
                     <p></p>
-                    <Header as='h1'>Thank you</Header>
+                    <Header as='h2'>Thank you</Header>
                     <Divider/>
                     <p>
                         Your medical data will now be processed
                         in a confidential manner so that nothing
-                        stands in the way of smooth threatment.
+                        stands in the way of a smooth treatment.
                     </p>
-                    <Image centered size='small' src={ logo } onClick={ this.generateHL7 }/>
+                    <Image centered size='tiny' src={ logo } onClick={ this.generateHL7 }/>
                     </Container>
                 </div>
             );

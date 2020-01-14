@@ -12,21 +12,47 @@ class App extends Component{
     this.state = {
       start: false,
       gender: "",
+
+      // Personal Information
       firstName: "",
       lastName: "",
       birthDate: "",
       telephoneNumber: "",
-      email: ""
+      email: "",
+
+      // Medicines
+      // totally missing atm!!!
+
+      // Allergies
+      // totally missing atm!!!
+
+      // Diseases
+      psoriasis: false,
+      whiteSkinCancer: false,
+      blackSkinCancer: false,
+      hiv: false,
+      neurodermatitis: false,
+      highBloodPreasure: false,
+      thrombosis: false,
+
+      // Further Diseases
+      smoker: false,
+      alcohol: false,
+      pregnant: false,
+
+      // Condition
+      conditionFirstOccurence: true,
+      conditionDateOfAppearance: '',
+      conditionDescription: '',
+      conditionBodysite: '',
+      //Further symptoms missing atm!!!
     }
   };
 
-  handleLol = () => {
-    console.log("That was fuckin awesome.");
-  }
-  handleStateChange = (name, value) => {
+  handleInformationChange = (field, value) => {
     this.setState(
-        {name: value}
-    );
+        {[field]: value}
+    , () => console.log(this.state));
   }
 
   handleOnClick = () => {
@@ -39,7 +65,7 @@ class App extends Component{
     if (this.state.start) {
       return(
         <Router>
-          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} lol={this.handleLol}/>}/>
+          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.handleInformationChange } patientData={ this.state}/>}/>
           <Redirect to='/Personal_Information' />
         </Router>
       );
