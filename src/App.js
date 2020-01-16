@@ -4,6 +4,7 @@ import { Button, Container, Image } from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Personal_Information from './personal_information/Personal_Information';
 import logo from './images/byoin_final.png'
+import Medicine from './medicines/Medicine'
 
 class App extends Component{
 
@@ -21,7 +22,7 @@ class App extends Component{
       email: "",
 
       // Medicines
-      // totally missing atm!!!
+      medicines:[Medicine],
 
       // Allergies
       // totally missing atm!!!
@@ -55,6 +56,10 @@ class App extends Component{
     , () => console.log(this.state));
   }
 
+  handleArrayChange = () => {
+    console.log('Hello');
+  }
+
   handleOnClick = () => {
     this.setState(
       {start: true}
@@ -65,7 +70,7 @@ class App extends Component{
     if (this.state.start) {
       return(
         <Router>
-          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.handleInformationChange } patientData={ this.state}/>}/>
+          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.handleInformationChange } patientData={ this.state } changeArray={ this.handleArrayChange }/>}/>
           <Redirect to='/Personal_Information' />
         </Router>
       );

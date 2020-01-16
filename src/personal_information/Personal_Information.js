@@ -102,7 +102,7 @@ class Personal_Information extends Component{
         } else if(this.state.next) {
             return(
                 <Router>
-                  <Route path='/Medicines' render={(props) => <Medicines {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData }/>}/>
+                  <Route path='/Medicines' render={(props) => <Medicines {...props} changeInformation={ this.props.changeInformation } patientData={ this.props.patientData } changeArray={this.props.changeArray}/>}/>
                   <Redirect to='/Medicines' />
                 </Router>
             );
@@ -110,7 +110,7 @@ class Personal_Information extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                        <Button basic color='orange' floated='left' icon onClick={ this.handleBack }>
+                        <Button basic color='yellow' floated='left' icon onClick={ this.handleBack }>
                                 <Icon name='angle left'/>
                         </Button>
                         <Button basic color='yellow' floated='right' icon onClick={ this.handleHint }>

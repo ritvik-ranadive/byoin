@@ -65,7 +65,7 @@ class Camera_Info extends Component{
                             <Icon name='angle left'/>
                         </Button>
                         <Header as='h2'>
-                            Wound Documentation
+                            Photo Documentation
                         </Header>
                         <Divider/>
                         <Icon name='camera' size='massive'></Icon>

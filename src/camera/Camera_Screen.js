@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Camera_Hint from "./Hint";
 import Condition from "../condition/Condition";
 import Camera_Info from "./Camera_Info";
-import Camera from 'react-html5-camera-photo';
+import Camera, { FACING_MODES }from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import ImagePreview from '../ImagePreview';
 import {useState} from 'react';
@@ -13,11 +13,34 @@ import {useState} from 'react';
 
 function CameraField (props) {
     const [dataUri, setDataUri] = useState('');
+    const [idealFacingMode, setIdealFacingMode] = useState(FACING_MODES.ENVIRONMENT);
+    const [frontCameraOn, setFrontCameraOn] = useState(false);
 
     function handleTakePhotoAnimationDone (dataUri) {
-        console.log('takePhoto');
+        //console.log('takePhoto');
         setDataUri(dataUri);
         props.onPhotoTaken();
+    }
+
+    function handleSwitchCamera(){
+
+        if(frontCameraOn){
+            setIdealFacingMode(FACING_MODES.ENVIRONMENT);
+            setFrontCameraOn(!frontCameraOn);
+        }
+        else{
+            setIdealFacingMode(FACING_MODES.USER);
+            setFrontCameraOn(!frontCameraOn);
+        }
+    }
+
+    function renderButtons () {
+        return (
+            <div>
+                <Button basic onClick={ handleSwitchCamera} icon> <Icon name='exchange' />
+                </Button>
+            </div>
+        );
     }
 
     const isFullscreen = false;
@@ -29,10 +52,12 @@ function CameraField (props) {
                                     isFullscreen={isFullscreen}
                     />
                     : <Camera onTakePhotoAnimationDone = {handleTakePhotoAnimationDone}
-                              isFullscreen={isFullscreen}
+                              isFullscreen={isFullscreen} idealFacingMode = {idealFacingMode}
                     />
             }
+            { renderButtons() }
         </div>
+
     );
 }
 

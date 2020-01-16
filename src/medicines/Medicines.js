@@ -6,16 +6,31 @@ import Allergies from '../allergies/Allergies';
 import Personal_Information from '../personal_information/Personal_Information'
 import Medicines_Hint from './Hint'
 import logo from '../images/byoin_logo_plus.png'
+import Medicine from './Medicine'
 
-class Medicine extends Component{
-    render(){
-        return (
-            <Form.Field>
-                <Input fluid placeholder='Name of Medication'/>
-            </Form.Field>
-        );
-    }
-}
+// class Medicine extends Component{
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             name: ''
+//         }
+//     }
+//
+//     render(){
+//         return (
+//             <Form.Field>
+//                 <Input fluid placeholder='Name of Medication' onChange={this.handleName}/>
+//             </Form.Field>
+//         );
+//     }
+//
+//     handleName = (event , {value}) => {
+//         console.log(value);
+//         this.setState({
+//             name: value
+//         })
+//     }
+// }
 
 class Medicines extends Component{
     
@@ -23,18 +38,18 @@ class Medicines extends Component{
         super(props);
         
         this.state = {
-            medicines: [Medicine],
+            medicines: this.props.patientData.medicines,
             next: false,
             hint: false,
             back: false
         }
 
-        this.add = this.add.bind(this);
     }
 
-    add(){
+    add = ()  => {
         const medicines = this.state.medicines.concat(Medicine)
         this.setState({ medicines });
+        this.props.changeInformation('medicines', medicines);
     }
 
     handleNext = () => {
@@ -79,6 +94,7 @@ class Medicines extends Component{
             ); 
         } else{
             const medicines = this.state.medicines.map((Element, index) => {
+                //console.log('In medicines: ', Element, index);
                 return <Element key={ index } index={ index } />
             });
             return(

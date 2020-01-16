@@ -146,7 +146,7 @@ class Diseases extends Component{
                                 <Form.Radio label="yes" value={true} checked={this.state.blackSkinCancer} onChange={this.handleChange3}/>
                             </Grid.Column>
                             <Grid.Column>
-                                <Form.Radio label="no" value={false} checked={!this.state.whiteSkinCancer} onChange={this.handleChange3}/>
+                                <Form.Radio label="no" value={false} checked={!this.state.blackSkinCancer} onChange={this.handleChange3}/>
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>

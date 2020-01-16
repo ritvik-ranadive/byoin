@@ -103,7 +103,6 @@ class Allergies extends Component{
                         <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Form>
                     </Container>
-                    
                 </div>
             )
         }
