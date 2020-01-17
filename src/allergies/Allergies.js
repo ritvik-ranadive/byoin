@@ -8,13 +8,29 @@ import Diseases from '../diseases/Diseases'
 import logo from '../images/byoin_logo_plus.png'
 
 class Allergy extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: this.props.patientData.allergies[this.props.index]
+        }
+    }
+
     render(){
         return (
             <Form.Field>
-                <Input focus fluid placeholder='Name of Allergy'/>
+                <Input focus fluid placeholder='Name of Allergy' value={this.state.name} onChange={this.handleName}/>
                 <p></p>
             </Form.Field>
         );
+    }
+
+    handleName = (event , {value}) => {
+        //console.log(value);
+        this.setState({
+            name: value
+        })
+        this.props.patientData.allergies[this.props.index] = value;
     }
 }
 
@@ -24,7 +40,7 @@ class Allergies extends Component{
         super(props);
         
         this.state = {
-            allergies: [Allergy],
+            allergies: this.props.patientData.allergies,
             next: false,
             hint: false,
             back: false
@@ -34,8 +50,9 @@ class Allergies extends Component{
     }
 
     add(){
-        const allergies = this.state.allergies.concat(Allergy)
+        const allergies = this.state.allergies.concat('');
         this.setState({ allergies });
+        this.props.changeInformation('allergies', allergies);
     }
 
     handleNext = () => {
@@ -80,7 +97,7 @@ class Allergies extends Component{
             ); 
         } else{
             const allergies = this.state.allergies.map((Element, index) => {
-                return <Element key={ index } index={ index } />
+                return <Allergy key={ index } index={ index } patientData={ this.props.patientData} />
             });
             return(
                 <div>

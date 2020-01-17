@@ -47,7 +47,7 @@ class Medicines extends Component{
     }
 
     add = ()  => {
-        const medicines = this.state.medicines.concat(Medicine)
+        const medicines = this.state.medicines.concat('');
         this.setState({ medicines });
         this.props.changeInformation('medicines', medicines);
     }
@@ -94,8 +94,8 @@ class Medicines extends Component{
             ); 
         } else{
             const medicines = this.state.medicines.map((Element, index) => {
-                //console.log('In medicines: ', Element, index);
-                return <Element key={ index } index={ index } />
+                //console.log(Element, index);
+                return <Medicine key={ index } index={ index } patientData={this.props.patientData} />
             });
             return(
                 <div>

@@ -13,6 +13,8 @@
     "multipleBirthBoolean" : "",
     "multipleBirthInteger" : "",
     "photo" : [{}],
+    "medicines": [],
+    "allergies": [],
     "contact" : [{ 
       "relationship" : [{}],
       "name" : {},

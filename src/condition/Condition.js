@@ -37,12 +37,28 @@ const bodySite = [
 ]
 
 class Further_Symptoms extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: this.props.patientData.symptoms[this.props.index]
+        }
+    }
+
     render(){
         return(
             <Form.Field>
-                <Input fluid placeholder='Further symptoms'/>
+                <Input fluid placeholder='Further symptoms' value={this.state.name} onChange={this.handleName}/>
             </Form.Field>
         );
+    }
+
+    handleName = (event , {value}) => {
+        //console.log(value);
+        this.setState({
+            name: value
+        })
+        this.props.patientData.symptoms[this.props.index] = value;
     }
 }
 
@@ -54,18 +70,19 @@ class Condition extends Component{
             submit: false,
             hint: false,
             back: false,
-            symptoms: [Further_Symptoms],
             conditionFirstOccurence: this.props.patientData.conditionFirstOccurence,
             conditionDescription: this.props.patientData.conditionDescription,
             conditionBodysite: this.props.patientData.conditionBodysite,
+            symptoms: this.props.patientData.symptoms
         };
 
         this.add = this.add.bind(this);
     }
 
     add(){
-        const symptoms = this.state.symptoms.concat(Further_Symptoms)
+        const symptoms = this.state.symptoms.concat('')
         this.setState({ symptoms });
+        this.props.changeInformation('symptoms', symptoms);
     }
 
     handleSubmit = () => {
@@ -131,7 +148,7 @@ class Condition extends Component{
             );
         } else {
             const symptoms = this.state.symptoms.map((Element, index) => {
-                return <Element key={ index } index={ index } />
+                return <Further_Symptoms key={ index } index={ index } patientData={this.props.patientData}/>
             });
             return(
                 <div>

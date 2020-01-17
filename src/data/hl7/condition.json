@@ -1,0 +1,35 @@
+{
+    "resourceType" : "Condition",
+    "identifier" : "", 
+    "clinicalStatus" : "", 
+    "verificationStatus" : "", 
+    "category" : "",
+    "severity" : "",
+    "code" : "",
+    "bodySite" : "",
+    "subject" : "",
+    "encounter" : "",
+    "onsetDateTime" : "",
+    "onsetAge" : "",
+    "onsetPeriod" : "",
+    "onsetRange" : "",
+    "onsetString" : "",
+    "abatementDateTime" : "",
+    "abatementAge" : "",
+    "abatementPeriod" : "",
+    "abatementRange" : "",
+    "abatementString" : "",
+    "recordedDate" : "",
+    "recorder" : "",
+    "asserter" : "",
+    "stage" : [{ 
+      "summary" : "", 
+      "assessment" : "",
+      "type" : ""
+    }],
+    "evidence" : [{
+      "code" : "",
+      "detail" : ""
+    }],
+    "note" : []
+  }

@@ -15,6 +15,7 @@ function CameraField (props) {
     const [dataUri, setDataUri] = useState('');
     const [idealFacingMode, setIdealFacingMode] = useState(FACING_MODES.ENVIRONMENT);
     const [frontCameraOn, setFrontCameraOn] = useState(false);
+    const [isImageMirror, setIsImageMirror] = useState(false);
 
     function handleTakePhotoAnimationDone (dataUri) {
         //console.log('takePhoto');
@@ -25,10 +26,12 @@ function CameraField (props) {
     function handleSwitchCamera(){
 
         if(frontCameraOn){
+            setIsImageMirror(true);
             setIdealFacingMode(FACING_MODES.ENVIRONMENT);
             setFrontCameraOn(!frontCameraOn);
         }
         else{
+            setIsImageMirror(false);
             setIdealFacingMode(FACING_MODES.USER);
             setFrontCameraOn(!frontCameraOn);
         }
@@ -43,16 +46,15 @@ function CameraField (props) {
         );
     }
 
-    const isFullscreen = false;
     return (
         <div>
             {
                 (dataUri)
                     ? <ImagePreview dataUri={dataUri}
-                                    isFullscreen={isFullscreen}
+                                    isFullscreen={false}
                     />
                     : <Camera onTakePhotoAnimationDone = {handleTakePhotoAnimationDone}
-                              isFullscreen={isFullscreen} idealFacingMode = {idealFacingMode}
+                              isFullscreen={false} idealFacingMode={idealFacingMode} isImageMirror={isImageMirror} isMaxResolution={true}
                     />
             }
             { renderButtons() }

@@ -22,10 +22,10 @@ class App extends Component{
       email: "",
 
       // Medicines
-      medicines:[Medicine],
+      medicines:[''],
 
       // Allergies
-      // totally missing atm!!!
+      allergies:[''],
 
       // Diseases
       psoriasis: false,
@@ -46,7 +46,7 @@ class App extends Component{
       conditionDateOfAppearance: '',
       conditionDescription: '',
       conditionBodysite: '',
-      //Further symptoms missing atm!!!
+      symptoms:['']
     }
   };
 
@@ -54,10 +54,6 @@ class App extends Component{
     this.setState(
         {[field]: value}
     , () => console.log(this.state));
-  }
-
-  handleArrayChange = () => {
-    console.log('Hello');
   }
 
   handleOnClick = () => {
@@ -70,7 +66,7 @@ class App extends Component{
     if (this.state.start) {
       return(
         <Router>
-          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.handleInformationChange } patientData={ this.state } changeArray={ this.handleArrayChange }/>}/>
+          <Route path='/Personal_Information' render={(props) => <Personal_Information {...props} changeInformation={ this.handleInformationChange } patientData={ this.state }/>}/>
           <Redirect to='/Personal_Information' />
         </Router>
       );

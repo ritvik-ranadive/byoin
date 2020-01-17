@@ -7,7 +7,7 @@ class Medicine extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            name: ''
+            name: this.props.patientData.medicines[this.props.index]
         }
     }
 
@@ -20,10 +20,11 @@ class Medicine extends Component{
     }
 
     handleName = (event , {value}) => {
-        console.log(value);
+        //console.log(value);
         this.setState({
             name: value
         })
+        this.props.patientData.medicines[this.props.index] = value;
     }
 }
 
