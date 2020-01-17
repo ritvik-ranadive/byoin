@@ -76,6 +76,7 @@ class App extends Component{
           <Container textAlign='center'>
             <p></p>
             <Image src={ logo } size='medium' centered />
+            <br/>
             <p>
               Hi, we are Byoin and we want to make your journey through the
               hospital as smooth and uncomplicated as possible.
@@ -85,6 +86,7 @@ class App extends Component{
               doctors can get an impression of your condition
               as well as your medical history.
             </p>
+            <br/><br/>
             <Button color='black' onClick={this.handleOnClick}>START</Button>
           </Container>
         </div>

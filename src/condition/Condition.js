@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Dropdown, Header, Divider, Form, Input, Button, Container, Icon, Image } from 'semantic-ui-react';
+import {Dropdown, Header, Divider, Form, Input, Button, Container, Icon, Image, Grid} from 'semantic-ui-react';
 import { DateInput } from 'semantic-ui-calendar-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Condition_Hint from './Hint'
@@ -153,22 +153,32 @@ class Condition extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                    <Button floated='left' icon onClick={ this.handleBack }>
+                    <Button basic circular color='yellow' floated='left' icon onClick={ this.handleBack }>
                             <Icon name='angle left'/>
                     </Button>
-                    <Button floated='right' icon onClick={ this.handleHint }>
+                    <Button basic circular color='yellow' floated='right' icon onClick={ this.handleHint }>
                             <Icon name='question circle outline'/>
                     </Button>
                     <Header as='h2'>
                         Condition 
                     </Header>
-                    <Divider/>
+                    {/* <Divider/> */}
+                    <br/>
+                        <Grid columns='equal'>
+                            <Grid.Row>
+                                <Grid.Column width={8} textAlign='left'>
+                                    First occurence
+                                </Grid.Column>
+                                <Grid.Column textAlign='right'>
+                                    <Form.Radio label="yes" value={true} checked={this.state.conditionFirstOccurence} onChange={this.handleChange1}/>
+                                </Grid.Column>
+                                <Grid.Column textAlign='right'>
+                                    <Form.Radio label="no" value={false} checked={!this.state.conditionFirstOccurence} onChange={this.handleChange1}/>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                        <p></p>
                     <Form>
-                        <Form.Group inline>
-                            <label>First occurence</label>
-                            <Form.Radio label='yes' value={true} checked={this.state.conditionFirstOccurence} onChange={this.handleChange1}/>
-                            <Form.Radio label='no' value={false} checked={!this.state.conditionFirstOccurence} onChange={this.handleChange1}/>
-                        </Form.Group>
                         <Form.Field>
                             <DateInput focus name='date' placeholder='Since when (approximately)' 
                                 value={ this.state.date } onChange={ this.handleChange }/>

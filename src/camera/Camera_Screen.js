@@ -26,7 +26,7 @@ function CameraField (props) {
     function handleSwitchCamera(){
 
         if(frontCameraOn){
-            setIsImageMirror(true);
+            setIsImageMirror(false);
             setIdealFacingMode(FACING_MODES.ENVIRONMENT);
             setFrontCameraOn(!frontCameraOn);
         }
@@ -140,16 +140,17 @@ class Camera_Screen extends Component{
                 return(
                     <div>
                         <Container textAlign='center'>
-                            <Button floated='left' icon onClick={ this.handleBack }>
+                            <Button basic color='yellow' circular floated='left' icon onClick={ this.handleBack }>
                                 <Icon name='angle left'/>
                             </Button>
-                            <Button floated='right' icon onClick={ this.handleHint }>
+                            <Button basic color='yellow' circular floated='right' icon onClick={ this.handleHint }>
                                 <Icon name='question circle outline'/>
                             </Button>
                             <Header as='h2'>
                                 Please take a photo
                             </Header>
-                            <Divider/>
+                            {/* <Divider/> */}
+                            <br/>
                             <CameraField onPhotoTaken={ this.handlePhotoTaken }/>
                             <p></p>
                             <Grid columns='equal'>

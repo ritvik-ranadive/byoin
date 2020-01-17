@@ -105,16 +105,17 @@ class Diseases extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                    <Button floated='left' icon onClick={ this.handleBack }>
+                    <Button basic  circular color='yellow' floated='left' icon onClick={ this.handleBack }>
                             <Icon name='angle left'/>
                     </Button>
-                    <Button floated='right' icon onClick={ this.handleHint }>
+                    <Button basic circular color='yellow' floated='right' icon onClick={ this.handleHint }>
                             <Icon name='question circle outline'/>
                     </Button>
                     <Header as='h2'>
-                        Existing/Prior Diseases
+                        Prior Diseases
                     </Header>
-                    <Divider/>
+                    {/* <Divider/> */}
+                    <br/>
                     <Grid columns='equal'>
                         <Grid.Row>
                             <Grid.Column width={8} textAlign='left'>
@@ -195,6 +196,7 @@ class Diseases extends Component{
                         </Grid.Row>
                     </Grid>
                     <p></p>
+                    <br/>
                     <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Container>
                 </div>

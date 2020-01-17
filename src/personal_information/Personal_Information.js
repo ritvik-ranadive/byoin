@@ -110,16 +110,17 @@ class Personal_Information extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                        <Button basic color='yellow' floated='left' icon onClick={ this.handleBack }>
+                        <Button basic circular color='yellow' floated='left' icon onClick={ this.handleBack }>
                                 <Icon name='angle left'/>
                         </Button>
-                        <Button basic color='yellow' floated='right' icon onClick={ this.handleHint }>
+                        <Button basic circular color='yellow' floated='right' icon onClick={ this.handleHint }>
                                 <Icon name='question circle outline'/>
                         </Button>
                         <Header as='h2'>
                             Personal Information
                         </Header>
-                        <Divider/>
+                        {/* <Divider/> */}
+                        <br/>
                         <Form>
                             <Form.Field>
                                 {
@@ -162,7 +163,7 @@ class Personal_Information extends Component{
                                 }
                             </Form.Field>
                         </Form>
-                        <p></p>
+                        <br/>
                         <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Container>
                 </div>

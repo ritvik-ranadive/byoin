@@ -61,13 +61,14 @@ class Camera_Info extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                        <Button floated='left' icon onClick={ this.handleBack }>
+                        <Button basic circular color='yellow' floated='left' icon onClick={ this.handleBack }>
                             <Icon name='angle left'/>
                         </Button>
                         <Header as='h2'>
                             Photo Documentation
                         </Header>
-                        <Divider/>
+                        {/* <Divider/> */}
+                        <br/>
                         <Icon name='camera' size='massive'></Icon>
                         <p></p>
                         <p></p>

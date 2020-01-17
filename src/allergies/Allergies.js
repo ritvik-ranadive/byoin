@@ -102,16 +102,17 @@ class Allergies extends Component{
             return(
                 <div>
                     <Container textAlign='center'>
-                    <Button floated='left' icon onClick={ this.handleBack }>
+                    <Button basic circular color='yellow' floated='left' icon onClick={ this.handleBack }>
                             <Icon name='angle left'/>
                     </Button>
-                    <Button floated='right' icon onClick={ this.handleHint }>
+                    <Button basic circular color='yellow' floated='right' icon onClick={ this.handleHint }>
                             <Icon name='question circle outline'/>
                     </Button>
                     <Header as='h2'>
                         Allergies 
                     </Header>
-                    <Divider/>
+                    {/* <Divider/> */}
+                    <br/>
                     <Form>
                         { allergies }
                         <p></p>
