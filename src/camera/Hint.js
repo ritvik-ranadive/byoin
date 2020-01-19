@@ -33,7 +33,7 @@ class Camera_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h2'>Taking a photo</Header>
+                        <Header as='h2'>Please take a photo</Header>
                         <p></p>
                         <Container text textAlign='center'>
                             <p>
@@ -41,9 +41,9 @@ class Camera_Hint extends Component{
                                 is clearly visible in the picture.
                             </p>
                             <p>
-                                If you are satisfied with the photo, click on
+                                If you are satisfied with the photo, click
                                 "NEXT" to proceed with the next step, otherwise
-                                click on "RETAKE" to take another photo.
+                                click "RETAKE" to take another photo.
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

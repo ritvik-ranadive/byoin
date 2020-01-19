@@ -57,7 +57,7 @@ class Condition_Hint extends Component{
                             </p>
                             <p>
                                 <b>Further symptoms:</b><br/>
-                                Please enter further symptoms (such as fever, exhaustion...).
+                                Please enter further symptoms (such as fever, exhaustion, ...).
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

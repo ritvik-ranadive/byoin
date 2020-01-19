@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import './index.css';
 import { Button, Container, Image } from 'semantic-ui-react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Personal_Information from './personal_information/Personal_Information';
@@ -63,6 +64,7 @@ class App extends Component{
   }
 
   render(){
+    console.log(this.state.gender, this.state.firstName, this.state.lastName, this.state.birthDate);
     if (this.state.start) {
       return(
         <Router>
@@ -82,7 +84,7 @@ class App extends Component{
               hospital as smooth and uncomplicated as possible.
             </p>
             <p>
-              Please fill out the following digital form so that the
+              Please fill out the following form so that the
               doctors can get an impression of your condition
               as well as your medical history.
             </p>

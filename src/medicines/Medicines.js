@@ -114,11 +114,13 @@ class Medicines extends Component{
                     <Form>
                         { medicines }
                         <p></p>
-                        <Image centered size='mini' src={ logo } onClick={ this.add } />
+                        <Button circular centered color="yellow" onClick={ this.add }>+</Button>
                         <p></p>
-                        <Button centered color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Form>
                     </Container>
+                    <div class="button--container">
+                      <Button fluid centered color='black' onClick={ this.handleNext }>NEXT</Button>
+                    </div>
                 </div>
             )
         }

@@ -41,7 +41,7 @@ class Further_Details_Hint extends Component{
                                 apply to you.
                             </p>
                             <p>
-                                For this purpose simply tick "Yes" or "No"
+                                For this purpose simply tick "yes" or "no".
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

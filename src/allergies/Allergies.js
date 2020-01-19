@@ -116,11 +116,13 @@ class Allergies extends Component{
                     <Form>
                         { allergies }
                         <p></p>
-                        <Image centered size='mini' src={ logo } onClick={ this.add } />
+                        <Button circular centered color="yellow" onClick={ this.add }>+</Button>
                         <p></p>
-                        <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Form>
                     </Container>
+                    <div class="button--container">
+                        <Button fluid color='black' onClick={ this.handleNext }>NEXT</Button>
+                    </div>
                 </div>
             )
         }

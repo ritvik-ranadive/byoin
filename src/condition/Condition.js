@@ -180,7 +180,7 @@ class Condition extends Component{
                         <p></p>
                     <Form>
                         <Form.Field>
-                            <DateInput focus name='date' placeholder='Since when (approximately)' 
+                            <DateInput focus fluid hideMobileKeyboard='true' closable='true' name='date' placeholder='Since when (approximately)' 
                                 value={ this.state.date } onChange={ this.handleChange }/>
                         </Form.Field>
                         <Form.Field>
@@ -193,18 +193,20 @@ class Condition extends Component{
                         <Form.Field>
                             {
                                 (this.state.conditionBodysite === '') ?
-                                    <Dropdown focus options={ bodySite } placeholder='Bodysite' onChange={this.handleConditionBodysite}/> :
-                                    <Dropdown focus options={ bodySite } placeholder='Bodysite' value={this.state.conditionBodysite} onChange={this.handleConditionBodysite}/>
+                                    <Dropdown focus fluid selection options={ bodySite } placeholder='Bodysite' onChange={this.handleConditionBodysite}/> :
+                                    <Dropdown focus fluid selection options={ bodySite } placeholder='Bodysite' value={this.state.conditionBodysite} onChange={this.handleConditionBodysite}/>
                             }
                         </Form.Field>
-                        <p></p>
                         { symptoms }
                         <p></p>
-                        <Image centered size='mini' src={ logo } onClick={ this.add } />
+                        <Button circular color="yellow" centered onClick={ this.add }>+</Button>
                     </Form>
                     <p></p>
-                    <Button color='black' onClick={ this.handleSubmit }>SUBMIT</Button>
                     </Container>
+                    <div class="button--container">
+                      <Button data-button fluid circular color='black' onClick={ this.handleSubmit }>SUBMIT</Button>
+                    </div>
+                    
                 </div>
             );
         }

@@ -40,12 +40,12 @@ class Allergies_Hint extends Component{
                             </p>
                             <p>
                                 If you have more than one allergy, you can simply 
-                                add the additional allergies using the
+                                add additional allergies using the
                                 "+" button.
                             </p>
                             <p>
-                                If you donot have any allergy at all,
-                                just click on "Next".
+                                If you do not have any allergy at all,
+                                just click "Next".
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

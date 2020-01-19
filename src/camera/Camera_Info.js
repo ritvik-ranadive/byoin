@@ -75,26 +75,20 @@ class Camera_Info extends Component{
                         <p>
                             In order to provide the treating physician with the 
                             best possible information, you can take a picture of 
-                            your condition in the next step. This image is later
-                            stored in the hospital system as a part of the digital
-                            file and can only be viewed by the authorized staff.
+                            your condition in the next step. This image is stored
+                            in the hospital system as a part of the digital
+                            file and can only be viewed by authorized staff.
                         </p>
                         <p>
-                            If your condition is not visible from the outside,
+                            If your condition is not visible from outside,
                             is in a hidden location, or you feel uncomfortable taking
                             a picture, you can simply skip this part.
                         </p>
-                        <Grid columns='equal'>
-                            <Grid.Row>
-                            <Grid.Column>
-                                <Button color='black' onClick={ this.handleTakePhoto }>TAKE PHOTO</Button>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <Button color='black' onClick={ this.handleSkip }>SKIP</Button>
-                            </Grid.Column>
-                            </Grid.Row>
-                        </Grid>
                     </Container>
+                    <div class="button--container">
+                        <Button fluid color='black' onClick={ this.handleTakePhoto }>TAKE PHOTO</Button>
+                        <Button fluid color='black' onClick={ this.handleSkip }>SKIP</Button>
+                    </div>
                 </div>
             );
         }

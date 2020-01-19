@@ -57,7 +57,6 @@ class Thanks extends Component{
                     <Container textAlign='center'>
                     <p></p>
                     <Header as='h2'>Thank you</Header>
-                    <Divider/>
                     <p>
                         Your medical data will now be processed
                         in a confidential manner so that nothing

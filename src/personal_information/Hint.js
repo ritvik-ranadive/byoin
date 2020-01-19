@@ -40,7 +40,7 @@ class Personal_Information_Hint extends Component{
                             </p>
                             <p>
                                 Fields marked with an asterisk are required to be 
-                                filled in, all remaining fields are optional
+                                filled in, all remaining fields are optional.
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

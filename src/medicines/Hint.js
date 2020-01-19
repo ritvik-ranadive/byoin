@@ -46,7 +46,7 @@ class Medicines_Hint extends Component{
                             </p>
                             <p>
                                 If you are not taking any medication at all,
-                                just click on "Next".
+                                just click "Next".
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>

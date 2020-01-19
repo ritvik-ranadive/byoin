@@ -46,22 +46,37 @@ class Personal_Information extends Component{
     }
 
     handleGender = (event, {value}) => {
+        this.setState({
+            gender: value
+        });
         this.props.changeInformation('gender', value);
     }
 
     handleFirstName = (event, {value}) => {
+        this.setState({
+            firstName: value
+        });
         this.props.changeInformation('firstName', value);
     }
 
     handleLastName = (event, {value}) => {
+        this.setState({
+            lastName: value
+        });
         this.props.changeInformation('lastName', value);
     }
 
     handleTelephoneNumber = (event, {value}) => {
+        this.setState({
+            telephoneNumber: value
+        });
         this.props.changeInformation('telephoneNumber', value);
     }
 
     handleEmail = (event, {value}) => {
+        this.setState({
+            email: value
+        });
         this.props.changeInformation('email', value);
     }
 
@@ -125,8 +140,8 @@ class Personal_Information extends Component{
                             <Form.Field>
                                 {
                                     (this.state.gender === '') ?
-                                        <Dropdown focus options={ genderOptions } placeholder='Please Choose... *' onChange={ this.handleGender }/> :
-                                        <Dropdown focus options={ genderOptions } text={this.state.gender} placeholder='Please Choose... *' onChange={ this.handleGender }/>
+                                        <Dropdown focus fluid selection options={ genderOptions } placeholder='Please Choose... *' onChange={ this.handleGender }/> :
+                                        <Dropdown focus fluid selection options={ genderOptions } text={this.state.gender} placeholder='Please Choose... *' onChange={ this.handleGender }/>
                                 }
                             </Form.Field>
                             <Form.Field>
@@ -144,7 +159,7 @@ class Personal_Information extends Component{
                                 }
                             </Form.Field>
                             <Form.Field>
-                                <DateInput focus name='date' placeholder='Birthdate *'
+                                <DateInput focus fluid hideMobileKeyboard='true' closable='true' name='date' placeholder='Birthdate *'
                                            value={this.state.date} onChange={this.handleChange}/>
                             </Form.Field>
                             <Form.Field>
@@ -159,13 +174,19 @@ class Personal_Information extends Component{
                                 {
                                     (this.state.email === '') ?
                                         <Input focus fluid placeholder='E-Mail' onChange={ this.handleEmail }/> :
-                                        <Input focus fluid placeholder='E-Mail' value={this.state.telephoneNumber} onChange={ this.handleEmail }/>
+                                        <Input focus fluid placeholder='E-Mail' value={this.state.email} onChange={ this.handleEmail }/>
                                 }
                             </Form.Field>
                         </Form>
                         <br/>
-                        <Button color='black' onClick={ this.handleNext }>NEXT</Button>
                     </Container>
+                    <div class="button--container">
+                        {
+                            (this.state.gender === '') || (this.state.firstName === '') || (this.state.lastName === '') || (this.state.date === '') ?
+                                <Button fluid color='black' color='grey'>NEXT</Button> :
+                                <Button fluid color='black' onClick={this.handleNext}>NEXT</Button>
+                        }
+                    </div>
                 </div>
             );
         }

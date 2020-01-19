@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*.fluid {*/
+/*  border: 1px solid #EDB74E !important;*/
+/*  border-radius: 2px !important;*/
+/*}*/
+
+[data-button] {
+  
+}
+
+.button--container {
+  width: 100%;
+  position: absolute;
+  bottom: 32px;
+  padding: 0 16px 0 16px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+ .button--container button {
+   border-radius: 6px !important;
+ }

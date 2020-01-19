@@ -33,7 +33,7 @@ class Diseases_Hint extends Component{
                 <div>
                     <Container textAlign='center'>
                         <p></p>
-                        <Header as='h2'>Existing/Prior Diseases</Header>
+                        <Header as='h2'>Chronic Diseases</Header>
                         <p></p>
                         <Container text textAlign='center'>
                             <p>
@@ -41,7 +41,7 @@ class Diseases_Hint extends Component{
                                 any of the listed diseases/infections.
                             </p>
                             <p>
-                                For this purpose simply tick "Yes" or "No"
+                                For this purpose simply tick "yes" or "no".
                             </p>
                             <p></p>
                             <Button color='yellow' onClick={ this.handleUnderstood }>UNDERSTOOD</Button>
