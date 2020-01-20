@@ -28,11 +28,11 @@ class Thanks extends Component{
         conditionHL7.clinicalStatus = "active";
         conditionHL7.verificationStatus = "unconfirmed";
         conditionHL7.bodySite = this.props.patientData.conditionBodysite;
-        conditionHL7.onsetDateTime = this.props.patientData.conditionDateofAppearance;
+        conditionHL7.onsetDateTime = this.props.patientData.conditionDateOfAppearance;
         conditionHL7.subject = patientHL7.name;
         conditionHL7.recordedDate = date;
         conditionHL7.recorder = patientHL7.name;
-        conditionHL7.note.push(this.props.patientData.conditionDescription);
+        conditionHL7.code = this.props.patientData.conditionDescription;
         conditionHL7.note.push(this.props.patientData.symptoms);
         conditionHL7.identifier = "1975638"
         this.setState(
