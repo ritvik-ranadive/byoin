@@ -202,11 +202,11 @@ class Condition extends Component{
                         <Button circular color="yellow" centered onClick={ this.add }>+</Button>
                     </Form>
                     <p></p>
+                        <br/>
+                        <div className="button--container">
+                            <Button data-button fluid color='black' onClick={this.handleSubmit}>SUBMIT</Button>
+                        </div>
                     </Container>
-                    <div class="button--container">
-                      <Button data-button fluid circular color='black' onClick={ this.handleSubmit }>SUBMIT</Button>
-                    </div>
-                    
                 </div>
             );
         }

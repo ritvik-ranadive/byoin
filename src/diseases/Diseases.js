@@ -307,12 +307,12 @@ class Diseases extends Component {
             </Grid>
             <p></p>
             <br />
+            <div className="button--container">
+              <Button fluid color="black" onClick={this.handleNext}>
+                NEXT
+              </Button>
+            </div>
           </Container>
-          <div class="button--container">
-            <Button fluid color="black" onClick={this.handleNext}>
-              NEXT
-            </Button>
-          </div>
         </div>
       );
     }

@@ -21,15 +21,13 @@ code {
   
 }
 
-.button--container {
-  width: 100%;
-  position: absolute;
-  bottom: 32px;
-  padding: 0 16px 0 16px;
-  left: 0;
-  display: flex;
-  justify-content: center;
-}
- .button--container button {
-   border-radius: 6px !important;
- }
+/*.button--container {*/
+/*  position: absolute;*/
+/*  bottom: 32px;*/
+/*  padding: 0 16px 0 16px;*/
+/*  margin: auto;*/
+/*  justify-content: center;*/
+/*}*/
+/* .button--container button {*/
+/*   border-radius: 6px !important;*/
+/* }*/

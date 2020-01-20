@@ -179,14 +179,14 @@ class Personal_Information extends Component{
                             </Form.Field>
                         </Form>
                         <br/>
+                        <div className="button--container">
+                            {
+                                (this.state.gender === '') || (this.state.firstName === '') || (this.state.lastName === '') || (this.state.date === '') ?
+                                    <Button fluid color='black' color='grey'>NEXT</Button> :
+                                    <Button fluid color='black' onClick={this.handleNext}>NEXT</Button>
+                            }
+                        </div>
                     </Container>
-                    <div class="button--container">
-                        {
-                            (this.state.gender === '') || (this.state.firstName === '') || (this.state.lastName === '') || (this.state.date === '') ?
-                                <Button fluid color='black' color='grey'>NEXT</Button> :
-                                <Button fluid color='black' onClick={this.handleNext}>NEXT</Button>
-                        }
-                    </div>
                 </div>
             );
         }

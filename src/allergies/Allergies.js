@@ -119,10 +119,10 @@ class Allergies extends Component{
                         <Button circular centered color="yellow" onClick={ this.add }>+</Button>
                         <p></p>
                     </Form>
+                        <div className="button--container">
+                            <Button fluid color='black' onClick={this.handleNext}>NEXT</Button>
+                        </div>
                     </Container>
-                    <div class="button--container">
-                        <Button fluid color='black' onClick={ this.handleNext }>NEXT</Button>
-                    </div>
                 </div>
             )
         }
