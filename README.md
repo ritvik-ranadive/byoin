@@ -10,13 +10,15 @@ Forms: Information about the patient and condition can already be filled out in 
 Computer Vision: Detection of location and type of condition is WIP <br/>
 
 ## Deployment Details:
-The web application has already been deployed on AWS Amplify and can be accessed using any web browser using any of the common platforms like mobile phones, PCs, tablets etc. <br/>
+The web application has already been deployed on AWS Amplify and can be accessed using any web browser on any of the common platforms like mobile phones, PCs, tablets etc. <br/>
 Please use the following QR code: <br/> <br/>
 ![ByoinQR](src/images/qrcode.png)
+<br/>
+Link: https://master.dx7w175wx869o.amplifyapp.com/
 
 ## Software Information:
 Node.js: v10.18.0 <br/>
-The application should work with higher versions of node.js as well but we have tested it on v10.18.0 <br/>
+The application should work with higher versions of node.js as well, but we have tested it on v10.18.0 <br/>
 Semantic UI React: v0.88.2 for the styling of the User Interface <br/>
 ReactJS: v16.12.0 for building the web application <br/>
 React-HTML5-Camera-Photo: v1.5.4 for accessing the front and back camera <br/>
@@ -40,6 +42,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open (http://localhost:3000) to view it in the browser.
+Note: In the development mode, the camera will not work on mobile phones as we require a secure web connection.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
