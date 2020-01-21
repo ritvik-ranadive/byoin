@@ -85,3 +85,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## References for the images
+<a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by brgfx - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by photoroyalty - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a>
+
