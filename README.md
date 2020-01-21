@@ -1,3 +1,22 @@
+![Byoin](src/images/Technical_Documentation.png)
+
+Software Information:
+Nodejs: v10.18.0
+Semantic UI React: 0.88.2
+
+## Installation:
+User needs to first install nodejs. The application should work with higher 
+versions of nodejs as well but we have tested it on v10.18.0.
+This version can be downloaded from the following link:
+https://nodejs.org/en/blog/release/v10.18.0/
+
+After installing nodejs user can clone the repository using
+the following command:
+### `git clone https://github.com/ritvik-ranadive/byoin.git`
+
+Then run the following command under byoin directory:
+### `npm install`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
