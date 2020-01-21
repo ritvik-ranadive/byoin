@@ -1,8 +1,8 @@
 ![Byoin](src/images/Technical_Documentation.png)
 
-Software Information:
-Nodejs: v10.18.0
-Semantic UI React: 0.88.2
+## Software Information:
+Nodejs: v10.18.0 <br/>
+Semantic UI React: 0.88.2 <br/>
 
 ## Installation:
 User needs to first install nodejs. The application should work with higher 
@@ -87,8 +87,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ## References for the images
-<a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by brgfx - www.freepik.com</a>
-<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a>
-<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by photoroyalty - www.freepik.com</a>
-<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by brgfx - www.freepik.com</a> <br/>
+<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a> <br/>
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by photoroyalty - www.freepik.com</a> <br/>
+<a href="https://www.freepik.com/free-photos-vectors/design">Design vector created by freepik - www.freepik.com</a> <br/>
 
