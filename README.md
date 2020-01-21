@@ -1,8 +1,23 @@
 ![Byoin](src/images/Technical_Documentation.png)
 
+## Implementation:
+Platform Independance: It can be used on any machine with a modern web browser like Google Chrome, Mozilla Firefox, Chromium Edge etc.<br/>
+Interoperability: The results are formatted in the HL7 FHIR format and can be used by any other application. <br/>
+Camera Access: The camera acess is already functional(front and back camera). <br/>
+Forms: Information about the patient and condition can already be filled out in the forms. <br/>
+Computer Vision: Detection of location and type of condition is WIP. <br/>
+
+## Deployment Details:
+The web application has already been deployed on Amazon Web Service Amplify and can be accessed using any web browser using any of the common platforms like mobile phones, PCs, tablets etc. <br/>
+It can be accessed using the following QR code:
+![ByoinQR](src/images/qrcode.png)
+
 ## Software Information:
 Nodejs: v10.18.0 <br/>
-Semantic UI React: 0.88.2 <br/>
+The application should work with higher versions of nodejs as well but we have tested it on v10.18.0
+Semantic UI React: v0.88.2 for the styling of the User Interface <br/>
+ReactJS: v16.12.0 for building the web application <br/>
+React-HTML5-Camera-Photo: v1.5.4 for accessing the front and back camera <br/>
 
 ## Installation:
 User needs to first install nodejs. The application should work with higher 
