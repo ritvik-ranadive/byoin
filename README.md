@@ -1,4 +1,6 @@
 ![Byoin](src/images/Technical_Documentation.png)
+<br/>
+Byoin is a web application that offers patients the possibility to use their waiting time in a meaningful way. With this, it is possible to fill out some information about themselves and their condition. This information is transformed into the HL7 FHIR format and can be shared with the infrastructure of the hospital.<br/>
 
 ## Implementation:
 Platform Independance: It can be used on any machine with a modern web browser like Google Chrome, Mozilla Firefox, Chromium Edge etc.<br/>
@@ -9,7 +11,7 @@ Computer Vision: Detection of location and type of condition is WIP. <br/>
 
 ## Deployment Details:
 The web application has already been deployed on Amazon Web Service Amplify and can be accessed using any web browser using any of the common platforms like mobile phones, PCs, tablets etc. <br/>
-It can be accessed using the following QR code:
+It can be accessed using the following QR code: <br/>
 ![ByoinQR](src/images/qrcode.png)
 
 ## Software Information:
