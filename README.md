@@ -3,31 +3,31 @@
 Byoin is a web application that offers patients the possibility to use their waiting time in a meaningful way. With this, it is possible to fill out some information about themselves and their condition. This information is transformed into the HL7 FHIR format and can be shared with the infrastructure of the hospital.<br/>
 
 ## Implementation:
-Platform Independance: It can be used on any machine with a modern web browser like Google Chrome, Mozilla Firefox, Chromium Edge etc.<br/>
-Interoperability: The results are formatted in the HL7 FHIR format and can be used by any other application. <br/>
-Camera Access: The camera acess is already functional(front and back camera). <br/>
-Forms: Information about the patient and condition can already be filled out in the forms. <br/>
-Computer Vision: Detection of location and type of condition is WIP. <br/>
+Platform Independence: It can be used on any machine with a modern web browser like Google Chrome, Mozilla Firefox or Chromium Edge<br/>
+Interoperability: The results are formatted in the HL7 FHIR format and can be used by any other application <br/>
+Camera Access: The camera access is already functional (front and back camera) <br/>
+Forms: Information about the patient and condition can already be filled out in the forms <br/>
+Computer Vision: Detection of location and type of condition is WIP <br/>
 
 ## Deployment Details:
-The web application has already been deployed on Amazon Web Service Amplify and can be accessed using any web browser using any of the common platforms like mobile phones, PCs, tablets etc. <br/>
-It can be accessed using the following QR code: <br/>
+The web application has already been deployed on AWS Amplify and can be accessed using any web browser using any of the common platforms like mobile phones, PCs, tablets etc. <br/>
+Please use the following QR code: <br/> <br/>
 ![ByoinQR](src/images/qrcode.png)
 
 ## Software Information:
-Nodejs: v10.18.0 <br/>
-The application should work with higher versions of nodejs as well but we have tested it on v10.18.0
+Node.js: v10.18.0 <br/>
+The application should work with higher versions of node.js as well but we have tested it on v10.18.0 <br/>
 Semantic UI React: v0.88.2 for the styling of the User Interface <br/>
 ReactJS: v16.12.0 for building the web application <br/>
 React-HTML5-Camera-Photo: v1.5.4 for accessing the front and back camera <br/>
 
 ## Installation:
-User needs to first install nodejs. The application should work with higher 
-versions of nodejs as well but we have tested it on v10.18.0.
+User needs to first install node.js. The application should work with higher 
+versions of node.js as well but we have tested it on v10.18.0.
 This version can be downloaded from the following link:
 https://nodejs.org/en/blog/release/v10.18.0/
 
-After installing nodejs user can clone the repository using
+After installing node.js user can clone the repository using
 the following command:
 ### `git clone https://github.com/ritvik-ranadive/byoin.git`
 
